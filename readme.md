@@ -51,4 +51,6 @@ CREATE TABLE tbl_funcionario (
     bonificacao DOUBLE(10,2) DEFAULT 0,
     FOREIGN KEY (id_empresa) REFERENCES tbl_empresa(id_empresa)
 );
+
+INSERT INTO tbl_usuario (login, senha) VALUES (‘teste@gmail.com.br’,’1234’)
 ```
