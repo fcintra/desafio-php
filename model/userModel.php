@@ -1,5 +1,7 @@
 <?php
+// model/UserModel.php
 class UserModel {
+    // Função para validar o login
     public function validateUser($login, $senha) {
         require_once '../db_connection.php';  
 
@@ -12,9 +14,9 @@ class UserModel {
 
         if (mysqli_num_rows($result) > 0) {
             return true;  //Usuário encontrado, login válido
+        } else {
+            return false; //Usuário não encontrado, login inválido
         }
-        
-        return false; //Usuário não encontrado, login inválido
     }
 }
 ?>

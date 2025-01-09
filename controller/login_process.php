@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $userModel = new UserModel();
         $result = $userModel->validateUser($login, $senha);  
         if ($result) {
-            header('Location: ../dashboard.php');
+            header('Location: ../view/dashboard.php');
             exit;
         } 
         session_start();
@@ -27,6 +27,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 }
 
 header('Location: ../view/login.php');
-exit;
+exit;   
 
 ?>

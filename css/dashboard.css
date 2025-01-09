@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-container {
+    width: 80%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th {
+    background-color: #0056b3;
+    color: #fff;
+    padding: 12px;
+    text-align: left;
+    font-size: 16px;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+tr {
+    background-color: #fff;
+}
+
+tr.blue {
+    background-color: #e0f7fa;
+}
+
+tr.red {
+    background-color: #ffebee;
+}
+
+td a {
+    color: #0056b3;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+td, th {
+    text-align: center;
+}
+
+td:nth-child(5), td:nth-child(6) {
+    font-weight: bold;
+    color: #00838f;
+}
+
+td:nth-child(4) {
+    font-size: 15px;
+    color: #555;
+}
+
+.alert {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.alert.success {
+    background-color: #4caf50;
+    color: white;
+}
+
+.alert.error {
+    background-color: #f44336;
+    color: white;
+}
+
+
+/* Botões de Ação no Dashboard */
+.action-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.action-buttons .btn {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.action-buttons .btn:hover {
+    background-color: #45a049;
+}
+
+.action-buttons .btn:active {
+    background-color: #388e3c;
+}
+
+.action-buttons .btn:focus {
+    outline: none;
+}
