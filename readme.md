@@ -52,5 +52,5 @@ CREATE TABLE tbl_funcionario (
     FOREIGN KEY (id_empresa) REFERENCES tbl_empresa(id_empresa)
 );
 
-INSERT INTO tbl_usuario (login, senha) VALUES (‘teste@gmail.com.br’,’1234’)
+INSERT INTO tbl_usuario (login, senha) VALUES ("teste@gmail.com.br", "1234");
 ```
