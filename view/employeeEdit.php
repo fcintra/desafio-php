@@ -51,12 +51,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <div class="form-group">
                 <label for="cpf">CPF:</label>
-                <input type="text" id="cpf" name="cpf" value="<?= htmlspecialchars($employee['cpf']) ?>" required>
+                <input type="text" id="cpf" name="cpf" maxlength="11" pattern="\d{11}" title="Digite 11 números para o CPF" value="<?= htmlspecialchars($employee['cpf']) ?>" required>
             </div>
 
             <div class="form-group">
                 <label for="rg">RG:</label>
-                <input type="text" id="rg" name="rg" value="<?= htmlspecialchars($employee['rg']) ?>" required>
+                <input type="text" id="rg" name="rg" maxlength="9" pattern="\d{9}" title="Digite no máximo 9 números para o RG" value="<?= htmlspecialchars($employee['rg']) ?>" required>
             </div>
 
             <div class="form-group">
@@ -66,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
             <div class="form-group">
                 <label for="salario">Salário:</label>
-                <input type="number" id="salario" name="salario" value="<?= htmlspecialchars($employee['salario']) ?>" step="0.01" required>
+                <input type="number" id="salario" name="salario" maxlength="10" title="Digite até 10 números para o salario" value="<?= htmlspecialchars($employee['salario']) ?>" step="0.01" required>
             </div>
 
             <div class="form-group">

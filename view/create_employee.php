@@ -18,17 +18,12 @@ $companies = $employeeModel->getAllCompanies();
     <div class="create-employee-container">
         <h2>Cadastrar Novo Funcionário</h2>
 
-        <?php
-        if (isset($_SESSION['success_message'])) {
-            echo '<div class="alert success">' . $_SESSION['success_message'] . '</div>';
-            unset($_SESSION['success_message']);
-        }
-
-        if (isset($_SESSION['error_message'])) {
-            echo '<div class="alert error">' . $_SESSION['error_message'] . '</div>';
-            unset($_SESSION['error_message']);
-        }
-        ?>
+        <?php if (isset($_SESSION['error_message'])): ?>
+            <div class="error-message">
+                <?= $_SESSION['error_message']; ?>
+            </div>
+            <?php unset($_SESSION['error_message']); ?>
+        <?php endif; ?>
 
         <form action="../controller/createEmployeeController.php" method="POST">
             <div class="input-group">
@@ -37,11 +32,11 @@ $companies = $employeeModel->getAllCompanies();
             </div>
             <div class="input-group">
                 <label for="cpf">CPF:</label>
-                <input type="text" id="cpf" name="cpf" required>
+                <input type="text" id="cpf" name="cpf" maxlength="11" pattern="\d{11}" title="Digite 11 números para o CPF" required>
             </div>
             <div class="input-group">
                 <label for="rg">RG:</label>
-                <input type="text" id="rg" name="rg" required>
+                <input type="text" id="rg" name="rg" maxlength="9" pattern="\d{9}" title="Digite no máximo 9 números para o RG" required>
             </div>
             <div class="input-group">
                 <label for="email">Email:</label>
@@ -58,7 +53,7 @@ $companies = $employeeModel->getAllCompanies();
             </div>
             <div class="input-group">
                 <label for="salario">Salário:</label>
-                <input type="number" step="0.01" id="salario" name="salario" required>
+                <input type="number" step="0.01" id="salario" name="salario" max="99999999.99" title="Digite até 10 números para o salário" required>
             </div>
             <div class="input-group">
                 <label for="data_entrada">Data de Entrada:</label>

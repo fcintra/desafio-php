@@ -23,6 +23,7 @@ $funcionarios = $employeeModel->getAllEmployees();
         <div class="action-buttons">
             <a href="create_company.php" class="btn">Cadastrar Nova Empresa</a>
             <a href="create_employee.php" class="btn">Cadastrar Novo Funcionário</a>
+            <a href="exportEmployees.php" class="btn" target="_blank">Exportar em PDF</a>
         </div>
 
         <table>

@@ -15,7 +15,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $companyModel = new CompanyModel();
 
     if ($companyModel->createCompany($nome_empresa)) {
-        $_SESSION['success_message'] = 'Empresa cadastrada com sucesso!';
         header("Location: ../view/dashboard.php");
         exit();
     } else {

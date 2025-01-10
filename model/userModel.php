@@ -9,8 +9,15 @@ class UserModel {
         $login = mysqli_real_escape_string($conn, $login);
         $senha = md5(mysqli_real_escape_string($conn, $senha));
 
+        error_log("Resultado da validação do usuário: " . print_r($login . $senha, true));
+
+
         $query = "SELECT * FROM tbl_usuario WHERE login = '$login' AND senha = '$senha'";
+
         $result = mysqli_query($conn, $query);
+
+        error_log("Resultado da validação do usuário: " . print_r($result, true));
+
 
         if (mysqli_num_rows($result) > 0) {
             return true;  //Usuário encontrado, login válido

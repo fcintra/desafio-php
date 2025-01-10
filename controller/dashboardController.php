@@ -1,4 +1,3 @@
-// /controllers/dashboardController.php
 <?php
 require_once '../models/funcionarioModel.php';
 
