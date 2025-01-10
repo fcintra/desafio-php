@@ -51,4 +51,18 @@ CREATE TABLE tbl_funcionario (
     bonificacao DOUBLE(10,2) DEFAULT 0,
     FOREIGN KEY (id_empresa) REFERENCES tbl_empresa(id_empresa)
 );
+
+INSERT INTO tbl_usuario (login, senha) VALUES ("teste@gmail.com.br", "1234");
 ```
+
+## Dependências do Projeto
+O projeto utiliza as seguintes dependências:
+
+dompdf/dompdf (para geração de PDFs)
+
+Estas dependências estão especificadas no arquivo composer.json
+
+para instalar a depencia: 
+
+```bash
+composer install
